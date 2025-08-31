@@ -19,26 +19,26 @@ import type { ImageData, MousePosition } from './types'
 // Demo configurations
 const DEMO_CONFIGS = {
   lady: {
-    original: '/img/lady.jpg',
-    depth: '/img/lady-map.jpg',
+    original: 'img/lady.jpg',
+    depth: 'img/lady-map.jpg',
     horizontalThreshold: 35,
     verticalThreshold: 15,
   },
   ball: {
-    original: '/img/ball.jpg',
-    depth: '/img/ball-map.jpg',
+    original: 'img/ball.jpg',
+    depth: 'img/ball-map.jpg',
     horizontalThreshold: 15,
     verticalThreshold: 25,
   },
   mount: {
-    original: '/img/mount.jpg',
-    depth: '/img/mount-map.jpg',
+    original: 'img/mount.jpg',
+    depth: 'img/mount-map.jpg',
     horizontalThreshold: 15,
     verticalThreshold: 25,
   },
   canyon: {
-    original: '/img/canyon.jpg',
-    depth: '/img/canyon-map.jpg',
+    original: 'img/canyon.jpg',
+    depth: 'img/canyon-map.jpg',
     horizontalThreshold: 35,
     verticalThreshold: 25,
   },
