@@ -16,19 +16,15 @@ export class DeviceOrientationManager {
   }
 
   async requestPermission(): Promise<boolean> {
-    console.log('Requesting device orientation permission...')
-    
     // For iOS 13+ devices, we need to request permission
     if (
       typeof DeviceOrientationEvent !== 'undefined' &&
       typeof (DeviceOrientationEvent as any).requestPermission === 'function'
     ) {
       try {
-        console.log('iOS device detected, requesting permission...')
         const permission = await (
           DeviceOrientationEvent as any
         ).requestPermission()
-        console.log('Permission result:', permission)
         return permission === 'granted'
       } catch (error) {
         console.warn('Device orientation permission denied:', error)
@@ -36,7 +32,6 @@ export class DeviceOrientationManager {
       }
     }
     
-    console.log('Non-iOS device or older iOS, permission not required')
     return true
   }
 
@@ -75,9 +70,6 @@ export class DeviceOrientationManager {
     if (!this.callback || !this.isActive) return
 
     const { alpha, beta, gamma } = event
-    
-    // Debug logging
-    console.log('Device orientation:', { alpha, beta, gamma, absolute: event.absolute })
     
     // Provide fallback values for null orientations
     const data: DeviceOrientationData = {
