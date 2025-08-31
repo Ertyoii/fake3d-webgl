@@ -231,6 +231,13 @@ export class Fake3DEffect {
   }
 
   private async setupDeviceOrientation(): Promise<void> {
+    // Check if we need permission (iOS 13+)
+    if (DeviceOrientationManager.needsPermission()) {
+      this.addPermissionButton()
+      return
+    }
+
+    // For non-iOS devices, start immediately
     try {
       this.orientationManager = new DeviceOrientationManager(15)
       await this.orientationManager.start(data => {
@@ -238,9 +245,51 @@ export class Fake3DEffect {
         this.mouse.targetX = mouseCoords.x
         this.mouse.targetY = mouseCoords.y
       })
+      console.log('Device orientation started successfully')
     } catch (error) {
-      console.log('Device orientation not supported or permission denied')
+      console.log('Device orientation not supported or permission denied:', error)
     }
+  }
+
+  private addPermissionButton(): void {
+    const button = document.createElement('button')
+    button.textContent = 'Enable Device Tilt'
+    button.style.cssText = `
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10002;
+      padding: 12px 24px;
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    `
+
+    button.addEventListener('click', async () => {
+      try {
+        this.orientationManager = new DeviceOrientationManager(15)
+        await this.orientationManager.start(data => {
+          const mouseCoords = this.orientationManager!.orientationToMouse(data)
+          this.mouse.targetX = mouseCoords.x
+          this.mouse.targetY = mouseCoords.y
+        })
+        button.remove()
+        console.log('Device orientation permission granted and started')
+      } catch (error) {
+        console.error('Failed to start device orientation:', error)
+        button.textContent = 'Permission Denied'
+        button.style.background = 'rgba(255, 0, 0, 0.8)'
+        button.style.color = 'white'
+      }
+    })
+
+    document.body.appendChild(button)
   }
 
   private handleResize(): void {
