@@ -3,13 +3,12 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Fake 3D Effect with WebGL Shaders | Demo 1 | Codrops</title>
-		<meta name="description" content="Demo of the tutorial on how to create a fake 3D image effect with WebGL shaders." />
-		<meta name="keywords" content="webgl, 3d, image, shader, javascript, tutorial, demo, web development, effect" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
-		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<title>Fake 3D Effect with WebGL Shaders</title>
+		<meta name="description" content="Interactive 3D image effect using WebGL shaders with mouse and device orientation controls." />
+		<meta name="keywords" content="webgl, 3d, shader, typescript, vite, interactive, mobile" />
+		<meta name="author" content="Modern WebGL Demo" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+		<link rel="stylesheet" href="/css/base.css" />
 	</head>
 	<body class="demo-1">
 		<main>
@@ -17,10 +16,10 @@
 			<div class="frame">
 				<div 
 					id="gl" 
-					data-imageOriginal="img/lady.jpg" 
-					data-imageDepth="img/lady-map.jpg" 
-					data-horizontalThreshold="35" 
-					data-verticalThreshold="15">
+					data-image-original="/img/lady.jpg" 
+					data-image-depth="/img/lady-map.jpg" 
+					data-horizontal-threshold="35" 
+					data-vertical-threshold="15">
 				</div>
 				<div class="frame__title-wrap">
 					<h1 class="frame__title">Fake 3D Effect with Shaders</h1>
