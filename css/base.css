@@ -41,6 +41,11 @@ body {
 	left: 0;
 	top: 0;
 	position: absolute;
+	pointer-events: none;
+}
+
+#gl canvas {
+	pointer-events: auto;
 }
 
 canvas {
@@ -147,6 +152,26 @@ a:focus {
 
 .frame__demos {
 	margin: 1rem 0;
+}
+
+.frame__demo {
+	background: none;
+	border: none;
+	color: var(--color-link);
+	cursor: pointer;
+	font-family: inherit;
+	font-size: inherit;
+	text-transform: lowercase;
+	transition: color 0.3s ease;
+	padding: 0;
+	margin-right: 1rem;
+	pointer-events: auto;
+	position: relative;
+	z-index: 10001;
+}
+
+.frame__demo:hover {
+	color: var(--color-link-hover);
 }
 
 .frame__demo--current,

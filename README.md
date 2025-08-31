@@ -1,12 +1,42 @@
 # Fake 3D Image Effect with WebGL
 
-An interactive "fake" 3D effect for images with plain WebGL.
+An interactive "fake" 3D effect for images with plain WebGL. **Completely modernized with TypeScript, Vite, and 2024 best practices.**
 
 ![Fake 3D Image Effect](https://tympanus.net/codrops/wp-content/uploads/2019/02/Fake3dEffect_featured1.jpg)
 
-[Article on Codrops](https://tympanus.net/codrops/?p=38413)
+[Article on Codrops](https://tympanus.net/codrops/?p=38413) | [Original Demo](http://tympanus.net/Tutorials/Fake3DEffect/)
 
-[Demo](http://tympanus.net/Tutorials/Fake3DEffect/)
+## 🚀 Quick Start
+
+```bash
+npm install    # Install dependencies
+npm run dev    # Start development server
+npm run build  # Build for production
+npm run deploy # Deploy to GitHub Pages
+```
+
+## ✨ Modern Features
+
+- **Vite** build system with instant HMR and optimized builds
+- **TypeScript** for type safety and better developer experience  
+- **Native Device Orientation API** (replaced old gyronorm library)
+- **Performance optimizations** with efficient WebGL resource management
+- **Modern ES2022+ syntax** with proper error handling and cleanup
+- **Multiple demos** with different images and threshold settings
+
+## Browser Support
+
+Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
+
+## 🌐 GitHub Pages Deployment
+
+This project is configured for easy deployment to GitHub Pages:
+
+1. **Automatic deployment:** Push to main/master branch triggers auto-deployment
+2. **Manual deployment:** Run `npm run deploy` 
+3. **Live URL:** `https://yourusername.github.io/fake3d/`
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
 
 ## Credits
 
@@ -27,8 +57,3 @@ Follow Codrops: [Twitter](http://www.twitter.com/codrops), [Facebook](http://www
 
 
 [© Codrops 2018](http://www.codrops.com)
-
-
-
-
-
