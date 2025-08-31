@@ -1,0 +1,35 @@
+---
+globs: README.md
+description: Guidelines for maintaining concise and clear README documentation
+---
+
+# README Documentation Guidelines
+
+When modifying [README.md](mdc:README.md):
+
+## Writing Style
+- **Keep it short and concise** - avoid bloated content
+- **Use clear, simple language** - no unnecessary jargon
+- **Be direct and actionable** - focus on what users need to know
+
+## Structure Requirements
+- **Quick Start section** - essential commands only
+- **Brief feature list** - highlight key capabilities
+- **Deployment instructions** - if applicable, keep minimal
+- **Credits section** - acknowledge sources appropriately
+
+## What to Avoid
+- ❌ Long explanations or tutorials
+- ❌ Excessive technical details
+- ❌ Redundant information
+- ❌ Marketing language or fluff
+- ❌ Multiple paragraphs for simple concepts
+
+## What to Include
+- ✅ Essential setup commands
+- ✅ Key features (bullet points)
+- ✅ Basic usage examples
+- ✅ Deployment steps (if needed)
+- ✅ Proper attribution
+
+Keep documentation focused on getting users started quickly with minimal reading.
