@@ -40,11 +40,25 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
 
 ## Credits
 
-*   [Gyronorm](https://github.com/dorukeker/gyronorm.js/) library by [Doruk Eker](http://dorukeker.com)
+### Original Concept
+This project is based on the **Fake 3D Image Effect** tutorial by [akella](https://github.com/akella):
+- **Original Repository:** [akella/fake3d](https://github.com/akella/fake3d)
+- **Tutorial Article:** [Codrops Article](https://tympanus.net/codrops/?p=38413)
+- **Original Demo:** [Live Demo](http://tympanus.net/Tutorials/Fake3DEffect/)
+
+### Modernization
+- Complete TypeScript rewrite with modern patterns
+- Vite build system replacing webpack
+- Single-page app with dynamic demo switching
+- Native Device Orientation API
+- GitHub Pages deployment configuration
+
+### Assets & Libraries
+*   Original [Gyronorm](https://github.com/dorukeker/gyronorm.js/) library by [Doruk Eker](http://dorukeker.com) (replaced with native API)
 *   Photo by [Cosmic Timetraveler](https://unsplash.com/photos/YK_8mABhrtc)
 *   Photo by [Chelsea Ferenando](https://unsplash.com/photos/WJRZNL7rDF8)
 *   Photo by [Rio Syhputra](https://unsplash.com/photos/JnOHvMgw_Jo)
-*   Phoyo by [Jonatan Pie](https://unsplash.com/photos/3l3RwQdHRHg)
+*   Photo by [Jonatan Pie](https://unsplash.com/photos/3l3RwQdHRHg)
 
 ## License
 This resource can be used freely if integrated or build upon in personal or commercial projects such as websites, web apps and web templates intended for sale. It is not allowed to take the resource "as-is" and sell it, redistribute, re-publish it, or sell "pluginized" versions of it. Free plugins built using this resource should have a visible mention and link to the original work. Always consider the licenses of all included libraries, scripts and images used.
