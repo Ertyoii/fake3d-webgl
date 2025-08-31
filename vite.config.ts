@@ -25,5 +25,5 @@ export default defineConfig({
     }
   },
   assetsInclude: ['**/*.jpg', '**/*.png', '**/*.webp'],
-  base: process.env.NODE_ENV === 'production' ? '/fake3d/' : '/'
+  base: './'
 })
